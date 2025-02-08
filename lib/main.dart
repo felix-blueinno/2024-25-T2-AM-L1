@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_1st_app/pokedex.dart';
+import 'package:my_1st_app/pokemon.dart';
 
 void main() {
   runApp(MainApp());
@@ -19,18 +21,42 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(0, 255, 255, 255),
         ),
-        body: ListView.builder(
-          itemBuilder: (BuildContext context, int index) {
-            return Text('Line $index');
-          },
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SearchBar(),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: pokedex.length,
+                itemBuilder: (context, index) {
+                  final pkm = Pokemon.fromJson(pokedex[index]);
+                  final id = pkm.id;
+                  final sp = pkm.species;
+                  final name = pkm.name;
+                  final eng = name.english;
+                  final sprite = pkm.image.sprite;
+                  final hires = pkm.image.hires;
+
+                  return ListTile(
+                    leading: Text('#$id'),
+                    title: Text('$eng'),
+                    subtitle: Text('$sp'),
+                    trailing: Image.asset(hires ?? sprite),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
-class lesson1 extends StatelessWidget {
-  const lesson1({
+class Lesson1 extends StatelessWidget {
+  const Lesson1({
     super.key,
   });
 
