@@ -15,6 +15,18 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       onGenerateRoute: (settings) {
+        if (settings.name == '/ygo') {
+          return CupertinoPageRoute(
+            builder: (context) => PkmTcgScreen(),
+          );
+        }
+
+        if (settings.name == '/fifa') {
+          return CupertinoPageRoute(
+            builder: (context) => PkmTcgScreen(),
+          );
+        }
+
         if (settings.name == '/pkm-tcg') {
           return CupertinoPageRoute(
             builder: (context) => PkmTcgScreen(),

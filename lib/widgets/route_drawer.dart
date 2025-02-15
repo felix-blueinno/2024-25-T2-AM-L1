@@ -10,12 +10,26 @@ class RouteDrawer extends StatelessWidget {
         children: [
           ListTile(
             title: Text('Pokedex'),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/');
+            },
           ),
           ListTile(
             title: Text('Pokemon-TCG'),
             onTap: () {
               Navigator.pushReplacementNamed(context, '/pkm-tcg');
+            },
+          ),
+          ListTile(
+            title: Text('YGO'),
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/ygo');
+            },
+          ),
+          ListTile(
+            title: Text('FIFA'),
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/fifa');
             },
           ),
         ],
