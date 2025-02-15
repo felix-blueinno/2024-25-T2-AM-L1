@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_1st_app/pokedex.dart';
-import 'package:my_1st_app/pokemon.dart';
+import 'package:my_1st_app/data/pokedex.dart';
+import 'package:my_1st_app/data/pokemon.dart';
+import 'package:my_1st_app/widgets/route_drawer.dart';
 
 class PokemonScreen extends StatelessWidget {
   const PokemonScreen({
@@ -10,22 +11,7 @@ class PokemonScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              title: Text('Pokedex'),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text('Pokemon-TCG'),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/pkm-tcg');
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: RouteDrawer(),
       appBar: AppBar(
         title: Text('Pokedex'),
         centerTitle: true,

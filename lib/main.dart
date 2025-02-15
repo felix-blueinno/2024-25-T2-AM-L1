@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_1st_app/pokedex.dart';
-import 'package:my_1st_app/pokemon.dart';
 import 'package:my_1st_app/screens/pkm_tcg_screen.dart';
 import 'package:my_1st_app/screens/pokemon_screen.dart';
 

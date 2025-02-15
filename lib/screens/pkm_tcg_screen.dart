@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_1st_app/widgets/route_drawer.dart';
 
 class PkmTcgScreen extends StatelessWidget {
   const PkmTcgScreen({super.key});
@@ -9,7 +10,7 @@ class PkmTcgScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('PKM TCG'),
       ),
-      drawer: Drawer(),
+      drawer: RouteDrawer(),
     );
   }
 }
