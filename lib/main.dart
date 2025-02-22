@@ -15,6 +15,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       onGenerateRoute: (settings) {
+        return CupertinoPageRoute(
+          builder: (context) => PkmTcgScreen(),
+        );
+
         if (settings.name == '/ygo') {
           return CupertinoPageRoute(
             builder: (context) => PkmTcgScreen(),
