@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_1st_app/screens/fifa_screen.dart';
 import 'package:my_1st_app/screens/pkm_tcg_screen.dart';
 import 'package:my_1st_app/screens/pokemon_screen.dart';
+import 'package:my_1st_app/screens/survival_screen.dart';
+import 'package:my_1st_app/screens/ygo_screen.dart';
 
 main() {
   runApp(MainApp());
@@ -18,13 +21,13 @@ class MainApp extends StatelessWidget {
       onGenerateRoute: (settings) {
         if (settings.name == '/ygo') {
           return CupertinoPageRoute(
-            builder: (context) => PkmTcgScreen(),
+            builder: (context) => YgoScreen(),
           );
         }
 
         if (settings.name == '/fifa') {
           return CupertinoPageRoute(
-            builder: (context) => PkmTcgScreen(),
+            builder: (context) => FifaScreen(),
           );
         }
 
@@ -35,7 +38,8 @@ class MainApp extends StatelessWidget {
         }
 
         return CupertinoPageRoute(
-          builder: (context) => PokemonScreen(),
+          // builder: (context) => PokemonScreen(),
+          builder: (context) => SurvivalScreen(),
         );
       },
       // home: PokemonScreen(),
