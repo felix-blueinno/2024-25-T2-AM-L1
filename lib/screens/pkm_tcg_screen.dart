@@ -44,16 +44,16 @@ class _PkmTcgScreenState extends State<PkmTcgScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('PKM TCG'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.refresh),
-            onPressed: () => _drawCard(),
-          ),
-        ],
-      ),
-      drawer: RouteDrawer(),
+      // appBar: AppBar(
+      //   title: Text('PKM TCG'),
+      //   actions: [
+      //     IconButton(
+      //       icon: Icon(Icons.refresh),
+      //       onPressed: () => _drawCard(),
+      //     ),
+      //   ],
+      // ),
+      // drawer: RouteDrawer(),
       body: Stack(
         children: [
           GridView.builder(
@@ -134,7 +134,7 @@ class _PkmTcgScreenState extends State<PkmTcgScreen> {
   void _drawCard() {
     _drawResults.clear();
 
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < 15; i++) {
       final random = Random().nextDouble() * 100;
       var cumulative = 0;
       var index = 0;
